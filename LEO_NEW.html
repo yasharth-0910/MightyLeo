@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+    <title>Vertical Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .image-container {
+            overflow-y: auto;
+            max-height: 80vh;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: 100%;
+            width:100%;
+            display: block;
+            margin: 0 auto; 
+        }
+    </style>
+    <link rel="icon" href="./assests/leo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="image-container">
+        <img src="./assests/image1.jpg" alt="image 1">
+        <img src="./assests/image2.jpg" alt="image 2">
+        <img src="./assests/image3.jpg" alt="image 3">
+        <img src="./assests/image4.jpg" alt="image 4">                
+        <img src="./assests/image5.jpg" alt="image 5">                                                            
+        <img src="./assests/image6.jpg" alt="image 6">                                                                    
+    </div>
+
+<script type="text/javascript" id="dcoder_script">class User {
+    constructor() {
+        this.name = '';
+        this.gender = '';
+        this.safe = 0;
+    }
+}
+function waitForInput() {
+    prompt("Press Enter to continue...");}
+function greetUser(user) {
+    user.name = prompt("Leo: Hi there! I'm Righteous Leo, your friendly guide to learning about your rights. What's your name, my new friend?");
+    
+    alert(`Leo: Nice to meet you, ${user.name}! We're going to embark on a journey to learn about your rights and make sure you're safe and happy. But first, could you tell me your gender? It's important for me to understand and respect who you are.`);
+
+    user.gender = prompt("Please enter your gender:");
+    checkSafety(user);
+}
+
+function checkSafety(user) {
+    const safe = parseInt(prompt(`Leo: Great! Now, let's talk about something really important. Do you feel safe, ${user.name}? You can tell me if something is bothering you or making you feel unsafe. (1 for safe, 0 for unsafe)`));
+
+    user.safe = safe;
+
+    if (user.safe) {
+        scenarioFeelingSafe(user);
+    } else {
+        scenarioFeelingUnsafe(user);
+    }
+}
+
+function scenarioFeelingSafe(user) {
+    alert(`Leo: I'm glad to hear that you feel safe, ${user.name}. It's important for every child to feel safe. Let's continue our journey to learn about your rights and how to protect them.`);
+
+    alert("Leo: Here are some of your rights we can explore:\n1. The right to education\n2. The right to play\n3. The right to express yourself");
+
+    const choice = parseInt(prompt("Leo: Please choose a number to learn more about that right:"));
+
+    switch (choice) {
+        case 1:
+            scenariorte(user);// Implement the educational scenario for the right to education.
+            break;
+        case 2:
+            scenariortpr(user);
+             // Implement the scenario for the right to play.
+            break;
+        case 3:
+            alert("Leo: Excellent! Let's dive into the right against exploitation and child abuse.");
+            scenariorae(user);
+            // Implement the scenario for the right to express yourself.
+            break;
+        default:
+            alert("Leo: Sorry, I didn't understand your choice. Let's continue our journey.");
+            break;
+    }
+}
+
+function scenarioFeelingUnsafe(user) {
+    alert(`Leo: I'm here to help, ${user.name}. If you're feeling unsafe or facing any problems, remember that you have rights to protect you. Let's talk about what's bothering you so we can find a solution together.`);
+
+    const userConcern = prompt("Leo: Please describe what's bothering you, and we'll see how we can address it:");
+
+    alert(`Leo: Thank you for sharing, ${user.name}. Let's work together to address this issue. We can learn about your rights and find the help you need.`);
+
+    // Implement further game logic for addressing the user's concerns.
+}
+function scenariorae(user)
+{
+  alert("Welcome Children");
+
+const name = prompt("Please enter your character's name (up to 99 characters):");
+
+alert(`${name} is going through an ongoing case of Child Abuse.`);
+alert("Child abuse is a physical and/or psychological maltreatment or neglect of a child or children, especially by a parent or a caregiver.");
+alert("Child abuse may include any act or failure to act by a parent or a caregiver that results in actual or potential harm to a child and can occur in a child's home, or in the organizations, schools, or communities the child interacts with.");
+alert("Press OK to continue...");
+
+alert(`One day, ${name} is laying on the bed scared of his/her abuser, crying, and suddenly Mr. Leo shows up with a shining light behind him.`);
+const choice1 = parseInt(prompt("1. Tell Mr. Leo about his incidences of abuse.\n2. Decide not to tell him.\nEnter your choice (1-2):"));
+
+if (isNaN(choice1) || (choice1 !== 1 && choice1 !== 2)) {
+    alert("Invalid input. Please enter 1 or 2.");
+} else {
+    if (choice1 === 1) {
+        alert(`${name} decides to tell Mr. Leo about his/her Abusers, who happens to be his/her Stepdad.`);
+        // Rest of the story...
+    } else {
+        alert(`${name} decides not to tell Mr. Leo about his/her abuse.`);
+    }
+
+    alert("Are you also an ongoing victim of Child Abuse?");
+    const choice2 = parseInt(prompt("1. You are\n2. You are not\nEnter your choice (1-2):"));
+
+    if (isNaN(choice2) || (choice2 !== 1 && choice2 !== 2)) {
+        alert("Invalid input. Please enter 1 or 2.");
+    } else {
+        if (choice2 === 1) {
+            alert("You can find your own Mr. Leo, just call 1098, and a Mr. Leo can brighten your life.");
+        } else {
+            alert("You can still help other children in your circle be aware of this issue, just share this website with them and help them find their Mr. Leo.");
+        }
+    }
+}
+
+}
+function scenariorte(user)
+{
+  alert("Orphan's path to Education!\n");
+
+    name = prompt("Please enter your character's name:");
+
+    alert(`\n${name}, you are a young orphan struggling to pay your school fees. You feel helpless.`);
+
+    waitForInput();
+
+    alert(`\nOne day, as you walk down the street, you meet Mr. Yasharth, who is an advocate. He asks about your problem and offers his assistance.`);
+
+    choice = parseInt(prompt("1. Tell Mr. Yasharth about your financial struggles.\n2. Decide not to tell him.\nEnter your choice (1-2):"));
+
+    if (choice === 1) {
+        alert("\nYou tell Mr. Yasharth about your financial struggles, and he offers you money to help pay your school fees.");
+        alert(`You accept his generous offer, and with his help, you can now continue your education, ${name}.`);
+    } else if (choice === 2) {
+        alert("\nYou decide not to tell Mr. Yasharth about your struggles and continue to face financial difficulties.");
+        alert(`Remember, ${name}, there are people willing to help if you share your problems.`);
+    } else {
+        alert("\nInvalid choice. Please try again.");
+    }
+
+    if (choice === 1) {
+        alert("\nMr. Yasharth, impressed by your determination, offers you another choice.");
+        
+        choice = parseInt(prompt("1. Accept the money.\n2. File a case against the school to get free education under the Right to Education quota.\nEnter your choice (1-2):"));
+
+        if (choice === 1) {
+            alert(`\nYou accept the money from Mr. Yasharth and use it to pay your school fees. You can now continue your education, ${name}.`);
+        } else if (choice === 2) {
+            alert("\nYou decide to file a case against the school to get free education under the Right to Education quota, with Mr. Yasharth's support.");
+            alert(`The legal battle is challenging, but eventually, you win the case and secure your right to education. Well done, ${name}!`);
+        } else {
+            alert("\nInvalid choice. Please try again.");
+        }
+    }
+
+    alert(`\nGoodbye, ${name}!`);
+
+  
+}
+function scenariortpr(user)
+{
+  alert("Leo: Welcome, young friend! Today, we'll explore your right to play and have fun.");
+alert("Leo: Imagine a beautiful park in your neighborhood, filled with swings, slides, and green trees, where children used to play freely.");
+alert("Leo: But, there's a problem. A wealthy builder named Mr. Greed has illegally captured the park and wants to turn it into a shopping mall. This is not right!");
+
+const choice1 = parseInt(prompt("Leo: What should you do?\n1. Confront Mr. Greed about the illegal capture.\n2. Keep quiet and do nothing.\nEnter your choice (1-2):"));
+
+if (isNaN(choice1) || (choice1 !== 1 && choice1 !== 2)) {
+    alert("Leo: Invalid input. Please enter 1 or 2.");
+} else {
+    if (choice1 === 1) {
+        alert("Leo: You decide to confront Mr. Greed and tell him that what he's doing is wrong. He listens but remains stubborn.");
+        const choice2 = parseInt(prompt("Leo: What's your next step?\n1. Rally your friends and neighbors to protest against the capture.\n2. Give up and stay silent.\nEnter your choice (1-2):"));
+
+        if (isNaN(choice2) || (choice2 !== 1 && choice2 !== 2)) {
+            alert("Leo: Invalid input. Please enter 1 or 2.");
+        } else {
+            if (choice2 === 1) {
+                alert("Leo: You and your friends organize a peaceful protest. Your unity catches the attention of the media, and people from all around join your cause.");
+                alert("Leo: The pressure mounts on Mr. Greed, and he finally gives up his plan to build the mall. The park is saved!");
+            } else {
+                alert("Leo: Sadly, you give up, and the park is lost forever to the shopping mall.");
+            }
+        }
+    } else {
+        alert("Leo: You decide to keep quiet and do nothing. The park is captured by Mr. Greed, and soon, it disappears under the shopping mall.");
+    }
+}
+
+alert("Leo: Remember, every child has the right to play and enjoy recreational activities. It's important to stand up for what's right!");
+
+}
+const user = new User();
+greetUser(user);</script></body></html>

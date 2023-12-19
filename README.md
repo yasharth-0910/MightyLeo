@@ -1,7 +1,4 @@
 # MightyLeo
-
-permalink: /HOMEPAGE.html
-
 <p><b>Code Crafters United is a student group comprised of enthusiastic students who are dedicated to the pursuit of establishing coding as a craft. Our primary mission includes raising awareness and harnessing the formidable power of technology to foster positive global change. Our key areas of focus are education, literacy, and promoting awareness.</b></p>
 
 
